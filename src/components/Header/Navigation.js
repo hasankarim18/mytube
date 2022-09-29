@@ -20,10 +20,7 @@ const Navigation = () => {
         setIsOpen(!isOpen)
     }
 
-
-
     return (
-
         <Navbar className={`container pt-sm-3 pb-sm-3 pt-3 pb-3 ${classes.navigation}`} expand="md">
             <Link className="navbar-brand text-white" to="/">
                 <div className="d-flex">
@@ -58,9 +55,7 @@ const Navigation = () => {
                     login info
                 </div>
             </Collapse>
-
         </Navbar>
-
     )
 }
 
