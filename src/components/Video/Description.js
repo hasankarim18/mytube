@@ -10,15 +10,17 @@ const Description = () => {
         <div className="pt-2 pb-4">
             <div className="d-flex justify-content-end">
                 <div className="c edit">
-                    <img style={{ width: "20px", marginRight: "5px" }} src={editImg} alt="edit" />
-                    <span> Edit</span>
+                    <Link to="/videos/edit/1" >
+                        <img style={{ width: "20px", marginRight: "5px" }} src={editImg} alt="edit" />
+                        <span> Edit</span>
+                    </Link>
                 </div>
-                <div className="ms-3  delete">
+                <div className="ms-5  delete">
                     <img style={{ width: "20px", marginRight: "5px" }} src={deleteImg} alt="edit" />
                     <span>Delete</span>
                 </div>
             </div>
-            <h5 className="text-start">Vide0 title: VS Code Snippets - Boost your productivity with User Snippets </h5>
+            <h5 className="text-start mt-3">Vide0 title: VS Code Snippets - Boost your productivity with User Snippets </h5>
             <div className="row  border-bottom pb-2">
                 <div className="col-6 text-start">
                     Uploaded on April 25, 2022

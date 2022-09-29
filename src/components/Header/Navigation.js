@@ -20,7 +20,7 @@ const Navigation = () => {
         setIsOpen(!isOpen)
     }
 
-    console.log(isOpen)
+
 
     return (
 
@@ -40,17 +40,17 @@ const Navigation = () => {
                 <Nav className="ml-auto" navbar>
                     <Link
                         style={{ border: "1px solid white" }}
-                        className="btn text-white font-weight-bold" to='/add-video' >
+                        className="btn text-white font-weight-bold" to='/videos/add' >
                         + Add Video
                     </Link>
                 </Nav>
                 <div className={classes.search_container} >
-                    <form class="form-inline my-2 my-lg-0">
+                    <form className="form-inline my-2 my-lg-0">
                         <div className={`d-inline-block ${classes.search_input}`}>
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                         </div>
                         <div className="d-inline-block ms-lg-2 ms-sm-2">
-                            <button class="btn btn-outline-success ms-2 text-white border-white" type="submit">Search</button>
+                            <button className="btn btn-outline-success ms-2 text-white border-white" type="submit">Search</button>
                         </div>
                     </form>
                 </div>
