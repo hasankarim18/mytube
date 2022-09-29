@@ -38,7 +38,11 @@ const Navigation = () => {
             <Collapse isOpen={isOpen} navbar className="justify-content-between">
 
                 <Nav className="ml-auto" navbar>
-
+                    <Link
+                        style={{ border: "1px solid white" }}
+                        className="btn text-white font-weight-bold" to='/add-video' >
+                        + Add Video
+                    </Link>
                 </Nav>
                 <div className={classes.search_container} >
                     <form class="form-inline my-2 my-lg-0">

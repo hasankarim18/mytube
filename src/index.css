@@ -15,4 +15,49 @@ code {
 
 .bg-piano {
   background-color: #E30E00;
+
+}
+
+.edit {
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.delete {
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.edit:hover {
+  color: yellowgreen !important;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: #E30E00 !important;
+  cursor: pointer;
+}
+
+.like {
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.unlike {
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.like:hover span {
+  color: yellowgreen !important;
+  cursor: pointer;
+}
+
+.unlike:hover {
+  color: #E30E00 !important;
+  cursor: pointer;
 }
