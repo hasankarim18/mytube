@@ -8,16 +8,19 @@ import authorImg from '../../assets/images/author.jpg'
 import classes from './VideoItem.module.css'
 import { Link } from 'react-router-dom';
 
-const VideoItem = () => {
+const VideoItem = ({ video }) => {
+
+    const { title, thumbnail: videoThumbnail, link, views, duration, date, author } = video
+
     return (
         <li className="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
             <Card className={`video_card ${classes.videoItem}`} >
                 <div className="position-relative">
                     <Link to="/videos/1">
-                        <CardImg top width="100%" src={thumbnail} alt="Card image cap" />
+                        <CardImg top width="100%" src={videoThumbnail} alt="Card image cap" />
                     </Link>
                     <div style={{ right: "10px", bottom: "10px" }} className="duration bg-dark text-white position-absolute">
-                        10.22
+                        {duration}
                     </div>
                 </div>
                 <CardBody>
@@ -32,12 +35,12 @@ const VideoItem = () => {
                         <div className="ps-2">
                             <Link className="text-dark" to="/videos/1">
                                 <h6 className="text-start">
-                                    Video Title
+                                    {title}
                                 </h6>
                             </Link>
                             <div className="text-start">
                                 <p>
-                                    20k views . date: 21, jun 2012
+                                    {views} views . {date}
                                 </p>
                             </div>
                         </div>
