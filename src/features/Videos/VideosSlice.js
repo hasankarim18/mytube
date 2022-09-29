@@ -39,8 +39,8 @@ export const videoSlice = createSlice({
     }
 })
 
-const videoReducer = videoSlice.reducer
+const videosReducer = videoSlice.reducer
 
 
-export default videoReducer
+export default videosReducer
 

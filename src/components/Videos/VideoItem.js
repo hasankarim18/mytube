@@ -10,13 +10,13 @@ import { Link } from 'react-router-dom';
 
 const VideoItem = ({ video }) => {
 
-    const { title, thumbnail: videoThumbnail, link, views, duration, date, author } = video
+    const { title, thumbnail: videoThumbnail, link, views, duration, date, author, id } = video
 
     return (
         <li className="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
             <Card className={`video_card ${classes.videoItem}`} >
                 <div className="position-relative">
-                    <Link to="/videos/1">
+                    <Link to={`/videos/${id}`}>
                         <CardImg top width="100%" src={videoThumbnail} alt="Card image cap" />
                     </Link>
                     <div style={{ right: "10px", bottom: "10px" }} className="duration bg-dark text-white position-absolute">

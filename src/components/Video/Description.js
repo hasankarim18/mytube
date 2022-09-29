@@ -5,25 +5,39 @@ import editImg from '../../assets/images/edit.svg'
 import deleteImg from '../../assets/images/delete.svg'
 import { Link } from 'react-router-dom'
 
-const Description = () => {
+const Description = ({ video }) => {
+
+    const { title, date, duration, description, author, views } = video
+
     return (
         <div className="pt-2 pb-4">
-            <div className="d-flex justify-content-end">
-                <div className="c edit">
-                    <Link to="/videos/edit/1" >
-                        <img style={{ width: "20px", marginRight: "5px" }} src={editImg} alt="edit" />
-                        <span> Edit</span>
-                    </Link>
+            <div className="d-flex justify-content-between">
+                <div>
+                    {views}
                 </div>
-                <div className="ms-5  delete">
-                    <img style={{ width: "20px", marginRight: "5px" }} src={deleteImg} alt="edit" />
-                    <span>Delete</span>
+                <div className="d-flex">
+                    <div className="edit">
+                        <Link to="/videos/edit/1" >
+                            <img style={{ width: "20px", marginRight: "5px" }} src={editImg} alt="edit" />
+                            <span> Edit</span>
+                        </Link>
+                    </div>
+                    <div className="ms-5  delete">
+                        <img style={{ width: "20px", marginRight: "5px" }} src={deleteImg} alt="edit" />
+                        <span>Delete</span>
+                    </div>
                 </div>
+
             </div>
-            <h5 className="text-start mt-3">Vide0 title: VS Code Snippets - Boost your productivity with User Snippets </h5>
+
+            <h5 className="text-start mt-3">
+                {title}
+            </h5>
             <div className="row  border-bottom pb-2">
+
                 <div className="col-6 text-start">
-                    Uploaded on April 25, 2022
+                    <span>  {author} </span> <br />
+                    <span>Uploaded on {date}</span>
                 </div>
                 <div className="col-6">
                     <div className="d-flex justify-content-end">
@@ -39,7 +53,9 @@ const Description = () => {
                 </div>
             </div>
             <div className="col-12 pt-2 text-start" >
-                <p>Tailwind is a utility-first CSS framework to rapidly build modern websites without ever leaving your HTML. In this Tailwind CSS tutorial, I have given a short introduction and overview of Tailwind CSS in Bangla language. Also, I have explained, why Tailwind vs Bootstrap debate should be stopped as both are useful in their own ways.</p>
+                <p>
+                    {description}
+                </p>
             </div>
         </div>
     )
